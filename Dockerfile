@@ -12,7 +12,10 @@ RUN apt-get update && apt install -y curl wget build-essential libcairo2-dev lib
 # Installation of IO2D
 RUN apt install -y git && git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl
 WORKDIR P0267_RefImpl/Debug
-RUN cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" .. && cmake --build .
-
+RUN cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" .. \
+    && cmake --build . \
+    && make install
+    
+WORKDIR /home
 
 CMD [ "/bin/sh", "--version" ]
