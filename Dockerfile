@@ -20,7 +20,7 @@ WORKDIR /home
 
 ENV PATH="/usr/local/include/io2d:/usr/include/cairo:${PATH}"
 
-RUN git clone --recurse-submodules https://github.com/mlgxmez/CppND-Route-Planning-Project
+RUN git clone --recurse-submodules https://github.com/mlgxmez/CppND-Route-Planning-Project .
 
 RUN mkdir build \
     && cd build \
