@@ -1,5 +1,7 @@
 # Route Planning Project
 
+[![Build Status](https://dev.azure.com/mlgxmez/test-pipelines/_apis/build/status/mlgxmez.CppND-Route-Planning-Project?branchName=master)](https://dev.azure.com/mlgxmez/test-pipelines/_build/latest?definitionId=2&branchName=master)
+
 This repo contains the starter code for the Route Planning project.
 
 <img src="map.png" width="600" height="450" />
