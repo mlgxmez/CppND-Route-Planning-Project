@@ -18,6 +18,8 @@ RUN cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" .. \
     
 WORKDIR /home
 
+ENV PATH="/usr/local/include/io2d:/usr/include/cairo:${PATH}"
+
 COPY . .
 
 RUN mkdir build \
