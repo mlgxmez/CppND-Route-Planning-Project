@@ -18,4 +18,11 @@ RUN cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" .. \
     
 WORKDIR /home
 
-CMD [ "/bin/sh", "--version" ]
+COPY . .
+
+RUN mkdir build \
+    && cd build \
+    && cmake .. \
+    && make
+
+CMD [ "./test"]
